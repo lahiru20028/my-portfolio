@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lahiru Kithsiri — Fullstack Developer</title>
+  <meta name="description"
+    content="Portfolio of Lahiru Kithsiri — Fullstack Developer specializing in React, Node.js, Spring Boot, and Flutter." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== BACKGROUND ANIMATION ===== -->
+  <div class="particle-container"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;LK /&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">Hello, I'm</p>
+      <h1 class="hero-name reveal">Lahiru Kithsiri</h1>
+      <div class="hero-typed reveal">
+        <span class="typed-prefix">&#123;</span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+        <span class="typed-prefix">&#125;</span>
+      </div>
+      <p class="hero-subtitle reveal">
+        BICT (Hons) Undergraduate at <strong>Rajarata University of Sri Lanka</strong>, specializing in Full-Stack
+        Development with <strong>JavaScript</strong> and <strong>Java</strong>.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">01.</span> About Me
+      </h2>
+      <div class="about-grid">
+        <!-- Profile Image Section -->
+        <div class="about-image-container reveal">
+          <div class="profile-image-frame">
+            <img src="IMG-20241124-WA0017.jpg" alt="Lahiru Kithsiri" class="profile-image" />
+            <div class="neon-border"></div>
+          </div>
+        </div>
+
+        <!-- About Text Section -->
+        <div class="about-content reveal">
+          <p class="about-description">
+            I am a dedicated <strong>BICT (Hons) Undergraduate</strong> at <strong>Rajarata University of Sri Lanka</strong>, specializing in <strong>Full-Stack Development</strong> and <strong>Data Science</strong>. With hands-on experience in building scalable web applications like Lumora and Management Systems, I focus on writing clean code and exploring innovative OSINT frameworks.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-badge">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <span>Full-Stack Developer</span>
+            </div>
+            <div class="highlight-badge">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+              <span>Continuous Learner</span>
+            </div>
+            <div class="highlight-badge">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span>Problem Solver</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">02.</span> Skills
+      </h2>
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card reveal">
+          <div class="skill-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+              <line x1="14" y1="4" x2="10" y2="20" />
+            </svg>
+          </div>
+          <h3 class="skill-card__title">Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-card reveal">
+          <div class="skill-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+              <line x1="6" y1="6" x2="6.01" y2="6" />
+              <line x1="6" y1="18" x2="6.01" y2="18" />
+            </svg>
+          </div>
+          <h3 class="skill-card__title">Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+        <!-- Mobile -->
+        <div class="skill-card reveal">
+          <div class="skill-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+              <line x1="12" y1="18" x2="12.01" y2="18" />
+            </svg>
+          </div>
+          <h3 class="skill-card__title">Mobile</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Flutter</span>
+          </div>
+        </div>
+        <!-- Databases -->
+        <div class="skill-card reveal">
+          <div class="skill-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+            </svg>
+          </div>
+          <h3 class="skill-card__title">Databases</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Firebase</span>
+          </div>
+        </div>
+        <!-- Other -->
+        <div class="skill-card reveal">
+          <div class="skill-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
+          </div>
+          <h3 class="skill-card__title">Other</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">03.</span> Projects
+      </h2>
+      <div class="projects-grid">
+        <!-- Lumora -->
+        <div class="project-card reveal">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+            </div>
+            <a href="https://github.com/lahiru20028/lumora" target="_blank" rel="noopener noreferrer"
+              class="project-card__gh" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-card__title">Full-Stack E-Commerce Platform</h3>
+          <p class="project-card__desc">
+            A high-performance Full-Stack E-Commerce platform engineered using the MERN stack (MongoDB, Express.js,
+            React, and Node.js). This robust application features a dynamic React frontend with seamless state
+            management, a RESTful API backend for secure user authentication (JWT), and advanced order processing
+            integrated with a scalable MongoDB database.
+          </p>
+          <div class="project-card__tags">
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+        <!-- Saloon Management -->
+        <div class="project-card reveal">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <a href="https://github.com/RukshanDinusha26/SaloonManagement" target="_blank" rel="noopener noreferrer"
+              class="project-card__gh" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-card__title">Salon Management Full-Stack Web App</h3>
+          <p class="project-card__desc">
+            Comprehensive salon management system with smart booking, role-based access, financial dashboards, and
+            Stripe payment integration.
+          </p>
+          <div class="project-card__tags">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>SQLite</span>
+            <span>Stripe</span>
+          </div>
+        </div>
+        <!-- Order Management System -->
+        <div class="project-card reveal">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                <line x1="8" y1="10" x2="16" y2="10" />
+                <line x1="8" y1="14" x2="16" y2="14" />
+                <line x1="8" y1="18" x2="12" y2="18" />
+              </svg>
+            </div>
+            <a href="https://github.com/lahiru20028/order-management-system" target="_blank" rel="noopener noreferrer"
+              class="project-card__gh" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-card__title">Order Management System</h3>
+          <p class="project-card__desc">
+            A streamlined order tracking and management solution designed specifically for small businesses to optimize
+            their workflow. It facilitates real-time order monitoring, inventory updates, and customer data management
+            within a unified dashboard.
+          </p>
+          <div class="project-card__tags">
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+            <span>React</span>
+          </div>
+        </div>
+        <!-- Point of Sales (POS) System -->
+        <div class="project-card reveal">
+          <div class="project-card__header">
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                <line x1="1" y1="10" x2="23" y2="10" />
+              </svg>
+            </div>
+            <a href="https://github.com/RukshanDinusha26/PosLine" target="_blank" rel="noopener noreferrer"
+              class="project-card__gh" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+          <h3 class="project-card__title">Point of Sales (POS) System</h3>
+          <p class="project-card__desc">
+            A robust Point of Sale (POS) application developed as a collaborative project to automate retail
+            transactions and sales reporting. The system features high-speed billing, automated inventory alerts, and
+            detailed sales analytics to improve business decision-making.
+          </p>
+          <div class="project-card__tags">
+            <span>Java</span>
+            <span>JavaScript</span>
+            <span>MySQL</span>
+            <span>PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section class="section section--alt" id="certifications">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">04.</span> Certifications
+      </h2>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-card__badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7" />
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+            </svg>
+          </div>
+          <h3 class="cert-card__title">CCNA Certification</h3>
+          <p class="cert-card__issuer">Simplilearn</p>
+          <p class="cert-card__desc">Cisco Certified Network Associate — Networking fundamentals, routing, switching,
+            and network security.</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-card__badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7" />
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+            </svg>
+          </div>
+          <h3 class="cert-card__title">Cyber Security</h3>
+          <p class="cert-card__issuer">Simplilearn</p>
+          <p class="cert-card__desc">Comprehensive cyber security training covering threat analysis, risk management,
+            and security best practices.</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-card__badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7" />
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+            </svg>
+          </div>
+          <h3 class="cert-card__title">DevOps</h3>
+          <p class="cert-card__issuer">Simplilearn</p>
+          <p class="cert-card__desc">DevOps practices including CI/CD pipelines, containerization, infrastructure
+            automation, and monitoring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast notification container -->
+  <div id="toast" class="toast" role="alert"></div>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">05.</span> Get In Touch
+      </h2>
+      <div class="contact-grid">
+        <!-- Left: Heading + Info -->
+        <div class="contact-left reveal">
+          <h3 class="contact-heading">Let's Connect</h3>
+          <p class="contact-desc">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+            something amazing. Feel free to reach out!
+          </p>
+          <div class="contact-list">
+            <a href="mailto:pn.lahirukithsiri@gmail.com" class="contact-item">
+              <span class="contact-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              <span class="contact-item__text">pn.lahirukithsiri@gmail.com</span>
+            </a>
+            <div class="contact-item">
+              <span class="contact-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </span>
+              <span class="contact-item__text">Bulathsinhala, Sri Lanka</span>
+            </div>
+            <a href="https://github.com/lahiru20028" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+              </span>
+              <span class="contact-item__text">github.com/lahiru20028</span>
+            </a>
+            <a href="https://www.linkedin.com/in/lahiru-kithsiri" target="_blank" rel="noopener noreferrer"
+              class="contact-item">
+              <span class="contact-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </span>
+              <span class="contact-item__text">linkedin.com/in/lahiru-kithsiri</span>
+            </a>
+          </div>
+        </div>
+        <!-- Right: Contact Form -->
+        <form id="contactForm" class="contact-form reveal">
+          <h3 class="form-title">Send Me a Message</h3>
+          <div class="form-group">
+            <label for="fromName">Your Name</label>
+            <input type="text" id="fromName" name="from_name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="fromEmail">Your Email</label>
+            <input type="email" id="fromEmail" name="from_email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Hi Lahiru, I'd like to discuss..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-send" id="sendBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+            <span id="sendBtnText">Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Lahiru Kithsiri</strong></p>
+      <p class="footer-sub">&copy; 2026 Lahiru Kithsiri. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
