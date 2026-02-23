@@ -108,6 +108,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => observer.observe(el));
 
+  /* ---- Force-download handler for CV links ---- */
+  async function forceDownload(url, suggestedName) {
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error('Network response was not ok');
+      const blob = await res.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = suggestedName || url.split('/').pop();
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(blobUrl);
+    } catch (err) {
+      // fallback: navigate to the file (browser default)
+      window.location.href = url;
+    }
+  }
+
+  // Attach handler to logo and any .btn-cv links
+  const cvLinks = [];
+  const logo = document.querySelector('.nav-logo');
+  if (logo && logo.tagName === 'A' && logo.getAttribute('href') && /\.pdf$/i.test(logo.getAttribute('href'))) cvLinks.push(logo);
+  document.querySelectorAll('a').forEach(a => {
+    if (a.classList.contains('btn-cv') || a.classList.contains('nav-cv-btn')) {
+      if (a.getAttribute('href') && /\.pdf$/i.test(a.getAttribute('href'))) cvLinks.push(a);
+    }
+  });
+
+  cvLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // allow ctrl/cmd+click or middle-click to open in new tab
+      if (e.ctrlKey || e.metaKey || e.button === 1) return;
+      const href = link.getAttribute('href');
+      console.log('CV link clicked:', href, 'protocol:', location.protocol);
+      // If opened from file://, let the browser handle it (some browsers block fetch)
+      if (location.protocol === 'file:') return;
+      e.preventDefault();
+      // Suggest a clean filename
+      const suggested = 'Lahiru_Kithsiri_CV.pdf';
+      forceDownload(href, suggested);
+    });
+  });
+
   /* ---- EmailJS Contact Form ---- */
   // ⚠️ REPLACE these placeholder values with your real EmailJS credentials:
   // 1. Go to https://www.emailjs.com/ and sign up (free)
