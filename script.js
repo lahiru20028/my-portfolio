@@ -111,9 +111,30 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Force-download handler for CV links ---- */
   async function forceDownload(url, suggestedName) {
     try {
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error('Network response was not ok');
-      const blob = await res.blob();
+      let blob;
+      // If served via file:// some browsers block fetch; try XHR first
+      if (location.protocol === 'file:') {
+        blob = await new Promise((resolve, reject) => {
+          try {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.responseType = 'blob';
+            xhr.onload = () => {
+              if (xhr.status === 200 || xhr.status === 0) resolve(xhr.response);
+              else reject(new Error('XHR failed'));
+            };
+            xhr.onerror = () => reject(new Error('XHR error'));
+            xhr.send();
+          } catch (e) {
+            reject(e);
+          }
+        });
+      } else {
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error('Network response was not ok');
+        blob = await res.blob();
+      }
+
       const blobUrl = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = blobUrl;
@@ -124,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       URL.revokeObjectURL(blobUrl);
     } catch (err) {
       // fallback: navigate to the file (browser default)
+      console.warn('forceDownload failed, falling back to navigation', err);
       window.location.href = url;
     }
   }
